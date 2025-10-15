@@ -1,0 +1,141 @@
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f7f8fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.02);
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+}
+
+.lane {
+  margin-bottom: 2.5rem;
+}
+
+.lane-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+/* Node circles */
+[data-role="nodecircle"] {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  background: #f7f8fa;
+  margin: 0 0.2em;
+  transition: box-shadow 0.15s, border 0.15s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+}
+[data-role="nodecircle"].bg-emerald-400 {
+  background: #34d399;
+  border-color: #059669;
+}
+[data-role="nodecircle"].bg-amber-200 {
+  background: #fde68a;
+  border-color: #f59e42;
+}
+[data-role="nodecircle"].bg-gray-300 {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* Lane row lines */
+.flex.items-center > .relative {
+  position: relative;
+}
+.flex.items-center > .relative > div {
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  z-index: 0;
+}
+.flex.items-center > .relative > div.bg-indigo-500 {
+  background: #6366f1;
+}
+
+/* Right panel */
+[data-role="rightpanel"] {
+  box-shadow: -2px 0 16px 0 rgba(0,0,0,0.06);
+  border-left: 1px solid #ececec;
+  background: #fff;
+}
+
+/* Floating Action Button */
+.fixed[aria-label="Add"] {
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
+  border: none;
+  background: #222;
+  color: #fff;
+  font-size: 2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.fixed[aria-label="Add"]:hover {
+  background: #444;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  main {
+    max-width: 100vw;
+    padding: 1rem 0.2rem;
+  }
+  [data-role="rightpanel"] {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    border-left: none;
+    border-top: 1px solid #ececec;
+    top: auto;
+    bottom: 0;
+    height: 50vh;
+    max-height: 400px;
+  }
+}
